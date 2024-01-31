@@ -2,761 +2,907 @@
 
 /* Base styles for the entire page */
 body {
-  font-family: 'Lato', sans-serif;
-  font-size: 16px;
-}
-
-/* Styles for body when it has the 'active' class */
-body.active {
-  overflow: hidden;
-  z-index: -1;
-}
-
-/* Styles for timeline blocks when JavaScript is disabled */
-.no-js #experience-timeline > div {
-  background: #fff;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #dcd9d9;
-}
-
-/* Styles for timeline block headings when JavaScript is disabled */
-.no-js #experience-timeline > div h3 {
-  font-size: 1.5em;
-  font-weight: 300;
-  color: #374054;
-  margin: 0;
-}
-
-/* Styles for timeline block subheadings when JavaScript is disabled */
-.no-js #experience-timeline > div h4 {
-  font-size: 1.2em;
-  font-weight: 300;
-  color: #7e8890;
-  margin: 0 0 15px 0;
-}
-
-/* Styles for timeline block paragraphs when JavaScript is disabled */
-.no-js #experience-timeline > div p {
-  color: #74808a;
-  font-size: 0.9em;
-  margin: 0;
-}
-
-/* Additional timeline styles when JavaScript is disabled */
-.no-js #experience-timeline:before,
-.no-js #experience-timeline:after {
-  content: none;
-}
-
-/* Keyframes animation for dropping the header */
-@keyframes dropHeader {
-  0% {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Styles for body when it has the 'active' class */
+  body.active {
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  /* Styles for timeline block when JavaScript is disabled */
+  .no-js #experience-timeline > div {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dcd9d9;
+  }
+  
+  /* Styles for timeline block headings when JavaScript is disabled */
+  .no-js #experience-timeline > div h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #374054;
+    margin: 0;
+  }
+  
+  .no-js #experience-timeline > div h4 {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #7e8890;
+    margin: 0 0 15px 0;
+  }
+  
+  .no-js #experience-timeline > div p {
+    color: #74808a;
+    font-size: 0.9em;
+    margin: 0;
+  }
+  
+  .no-js #experience-timeline:before,
+  .no-js #experience-timeline:after {
+    content: none;
+  }
+  
+  /* Keyframes animation for dropping the header */
+  @keyframes dropHeader {
+    0% {
       transform: translateY(-100%);
-  }
-  100% {
+    }
+    100% {
       transform: translateY(0);
+    }
   }
-}
-
-/* Styles for the header */
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 10;
-  animation-name: dropHeader;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
-  animation-duration: 0.75s;
-}
-
-/* Styles for the header navigation menu */
-header ul {
-  display: inline-block;
-  background: #fff;
-  text-align: center;
-  padding: 10px;
-  margin: 0;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-
-/* Styles for individual items in the header navigation menu */
-header li {
-  display: inline-block;
-}
-
-/* Styles for links in the header navigation menu */
-header a {
-  display: block;
-  color: #2ecc71;
-  padding: 10px;
-}
-
-/* Hover styles for links in the header navigation menu */
-header a:hover {
-  color: #217dbb;
-  text-decoration: none;
-  background: #eee;
-  border-radius: 4px;
-}
-
-/* Focus styles for links in the header navigation menu */
-header a:focus {
-  color: #2ecc71;
-  text-decoration: none;
-}
-
-/* Styles for the header when it has the 'active' class */
-header.active {
-  display: block;
-}
-
-/* Sticky header styles */
-header.sticky {
-  position: fixed;
-  z-index: 999;
-}
-
-/* Styles for the mobile menu when it has the 'active' class */
-#menu.active {
-  display: block;
-}
-
-/* Styles for the mobile menu open button */
-#mobile-menu-open {
-  display: none;
-  cursor: pointer;
-  position: fixed;
-  right: 15px;
-  top: 10px;
-  color: #2ecc71;
-  font-size: 1.5em;
-  z-index: 20;
-  padding: 0 7px;
-  border-radius: 4px;
-  background: #fff;
-}
-
-/* Styles for the mobile menu close button */
-#mobile-menu-close {
-  display: none;
-  text-align: right;
-  width: 100%;
-  background: #fff;
-  font-size: 1.5em;
-  padding-right: 15px;
-  padding-top: 10px;
-  cursor: pointer;
-  color: #2ecc71;
-}
-
-/* Additional styles for the mobile menu close button */
-#mobile-menu-close span {
-  font-size: 0.5em;
-  text-transform: uppercase;
-}
-
-/* Additional styles for the mobile menu close button icon */
-#mobile-menu-close i {
-  vertical-align: middle;
-}
-
-/* Styles for the footer */
-footer {
-  padding: 50px 0;
-}
-
-/* Styles for copyright information in the footer */
-.copyright {
-  padding-top: 20px;
-}
-
-/* Styles for copyright text in the footer */
-.copyright p {
-  margin: 0;
-  color: #74808a;
-}
-
-/* Styles for the "back to top" button */
-.top {
-  text-align: center;
-}
-
-/* Styles for the "back to top" button icon */
-.top span {
-  cursor: pointer;
-  display: block;
-  margin: 15px auto 0 auto;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  border: 3px solid #b9bfc4;
-  text-align: center;
-}
-
-/* Additional styles for the "back to top" button icon */
-.top i {
-  color: #74808a;
-}
-
-/* Styles for the social media section */
-.social {
-  text-align: right;
-}
-
-/* Styles for the social media list */
-.social ul {
-  margin: 5px 0 0 0;
-  padding: 0;
-}
-
-/* Styles for individual items in the social media list */
-.social li {
-  display: inline-block;
-  font-size: 1.25em;
-  list-style: none;
-}
-
-/* Styles for links in the social media list */
-.social a {
-  display: block;
-  color: #74808a;
-  padding: 10px;
-}
-
-/* Hover styles for links in the social media list */
-.social a:hover {
-  color: #2ecc71;
-}
-
-/* Styles for the rounded white button */
-.btn-rounded-white {
-  display: inline-block;
-  color: #fff;
-  padding: 15px 25px;
-  border: 3px solid #fff;
-  border-radius: 30px;
-  transition: 0.5s ease all;
-}
-
-/* Hover styles for the rounded white button */
-.btn-rounded-white:hover {
-  color: #2ecc71;
-  background: #fff;
-  text-decoration: none;
-}
-
-/* Box shadow styles */
-.shadow {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-/* Large box shadow styles */
-.shadow-large {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.15);
-}
-
-/* Styles for section headings */
-.heading {
-  position: relative;
-  display: inline-block;
-  font-size: 2em;
-  font-weight: 300;
-  margin: 0 0 30px 0;
-}
-
-/* Additional styles for section headings */
-.heading:after {
-  position: absolute;
-  content: '';
-  top: 100%;
-  height: 1px;
-  width: 50px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  background: #2ecc71;
-}
-
-/* Styles for sections with alternate background */
-.background-alt {
-  background: #f2f2f5;
-}
-
-/* Styles for the lead section */
-#lead {
-  position: relative;
-  height: 100vh;
-  min-height: 500px;
-  max-height: 1080px;
-  background: url(../images/lead-bg.jpg);
-  background-size: cover;
-  padding: 15px;
-  overflow: hidden;
-}
-
-/* Styles for the lead content */
-#lead-content {
-  position: absolute;
-  z-index: 10;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-/* Styles for lead heading 1 */
-#lead-content h1 {
-  margin: 0;
-  color: #fff;
-  font-weight: 900;
-  font-size: 5em;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  line-height: 0.9em;
-}
-
-/* Styles for lead heading 2 */
-#lead-content h2 {
-  margin: 0;
-  color: #ebf0f2; /* or any other desired color */
-  font-weight: 500;
-  font-size: 2.25em;
-  margin-bottom: 15px;
-}
-
-/* Styles for span within lead heading 2 */
-#lead-content h2 span {
-  color: #2ecc71; /* or any other green color you prefer */
-}
-
-/* Styles for lead overlay */
-#lead-overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(46, 204, 113, 0.8);
-  z-index: 1;
-}
-
-/* Styles for lead down button */
-#lead-down {
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-  text-align: center;
-  z-index: 10;
-  bottom: 15px;
-  color: #fff;
-}
-
-/* Styles for span within lead down button */
-#lead-down span {
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  border: 3px solid #f0f4f2; /* or any other green color you prefer */
-  text-align: center;
-}
-
-/* Styles for icon within lead down button */
-#lead-down i {
-  animation: pulsate 1.5s ease;
-  animation-iteration-count: infinite;
-  padding-top: 5px;
-}
-
-/* Additional styles for icon within lead down button */
-#lead-down i {
-  animation: pulsate 1.5s ease;
-  animation-iteration-count: infinite;
-  padding-top: 5px;
-}
-
-/* Keyframes animation for pulsating effect */
-@keyframes pulsate {
-  0% {
+  
+  /* Styles for the header */
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    animation-name: dropHeader;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: 0.75s;
+  }
+  
+  /* Styles for the header navigation menu */
+  header ul {
+    display: inline-block;
+    background: #fff;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  
+  /* Styles for individual items in the header navigation menu */
+  header li {
+    display: inline-block;
+  }
+  
+  /* Styles for linkes in the header navigation menu */
+  header a {
+    display: block;
+    color: #2ecc71;
+    padding: 10px;
+  }
+  
+  /* Hover styles for linkes in the navigation menu */
+  header a:hover {
+    color: #217dbb;
+    text-decoration: none;
+    background: #eee;
+    border-radius: 4px;
+  }
+  
+  /* Focus styles for links in the header navigation manu */
+  header a:focus {
+    color: #2ecc71;
+    text-decoration: none;
+  }
+  
+  /* Styles for the header when it has the 'active' class */
+  header.active {
+    display: block;
+  }
+  
+  /* Sticky header styles */
+  header.sticky {
+    position: fixed;
+    z-index: 999;
+  }
+  
+  #menu.active {
+    display: block;
+  }
+  
+  #mobile-menu-open {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    right: 15px;
+    top: 10px;
+    color: #2ecc71;
+    font-size: 1.5em;
+    z-index: 20;
+    padding: 0 7px;
+    border-radius: 4px;
+    background: #fff;
+  }
+  
+  #mobile-menu-close {
+    display: none;
+    text-align: right;
+    width: 100%;
+    background: #fff;
+    font-size: 1.5em;
+    padding-right: 15px;
+    padding-top: 10px;
+    cursor: pointer;
+    color: #2ecc71;
+  }
+  
+  #mobile-menu-close span {
+    font-size: 0.5em;
+    text-transform: uppercase;
+  }
+  
+  #mobile-menu-close i {
+    vertical-align: middle;
+  }
+  
+  footer {
+    padding: 50px 0;
+  }
+  
+  .copyright {
+    padding-top: 20px;
+  }
+  
+  .copyright p {
+    margin: 0;
+    color: #74808a;
+  }
+  
+  .top {
+    text-align: center;
+  }
+  
+  .top span {
+    cursor: pointer;
+    display: block;
+    margin: 15px auto 0 auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid #b9bfc4;
+    text-align: center;
+  }
+  
+  .top i {
+    color: #74808a;
+  }
+  
+  .social {
+    text-align: right;
+  }
+  
+  .social ul {
+    margin: 5px 0 0 0;
+    padding: 0;
+  }
+  
+  .social li {
+    display: inline-block;
+    font-size: 1.25em;
+    list-style: none;
+  }
+  
+  .social a {
+    display: block;
+    color: #74808a;
+    padding: 10px;
+  }
+  
+  .social a:hover {
+    color: #2ecc71;
+  }
+  
+  .btn-rounded-white {
+    display: inline-block;
+    color: #fff;
+    padding: 15px 25px;
+    border: 3px solid #fff;
+    border-radius: 30px;
+    transition: 0.5s ease all;
+  }
+  
+  .btn-rounded-white:hover {
+    color: #2ecc71;
+    background: #fff;
+    text-decoration: none;
+  }
+  
+  .shadow {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  
+  .shadow-large {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .heading {
+    position: relative;
+    display: inline-block;
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+  }
+  
+  .heading:after {
+    position: absolute;
+    content: '';
+    top: 100%;
+    height: 1px;
+    width: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: #2ecc71;
+  }
+  
+  .background-alt {
+    background: #f2f2f5;
+  }
+  
+  #lead {
+    position: relative;
+    height: 100vh;
+    min-height: 500px;
+    max-height: 1080px;
+    background: url(../images/lead-bg.jpg);
+    background-size: cover;
+    padding: 15px;
+    overflow: hidden;
+  }
+  
+  #lead-content {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  #lead-content h1,
+  #lead-content h2 {
+    margin: 0;
+  }
+  
+  #lead-content h1 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 5em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 0.9em;
+  }
+  
+  #lead-content h2 {
+    color: #ebf0f2; /* or any other desired color */
+    font-weight: 500;
+    font-size: 2.25em;
+    margin-bottom: 15px;
+  }
+  
+  #lead-content h2 span {
+    color: #2ecc71; /* or any other green color you prefer */
+  }
+  
+  #lead-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(46, 204, 113, 0.8);
+    z-index: 1;
+  }
+  
+  #lead-down {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    bottom: 15px;
+    color: #fff;
+  }
+  
+  #lead-down span {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid #f0f4f2; /* or any other green color you prefer */
+    text-align: center;
+  }
+  
+  #lead-down i {
+    animation: pulsate 1.5s ease;
+    animation-iteration-count: infinite;
+    padding-top: 5px;
+  }
+  
+  
+  #lead-down i {
+    animation: pulsate 1.5s ease;
+    animation-iteration-count: infinite;
+    padding-top: 5px;
+  }
+  
+  @keyframes pulsate {
+    0% {
       transform: scale(1, 1);
-  }
-  50% {
+    }
+    50% {
       transform: scale(1.2, 1.2);
-  }
-  100% {
+    }
+    100% {
       transform: scale(1, 1);
+    }
   }
-}
-
-/* Styles for the 'about' section */
-#about {
-  padding: 75px 15px;
-  border-bottom: 1px solid #dcd9d9;
-}
-
-/* Styles for 'about' section heading 2 */
-#about h2 {
-  color: #374054;
-}
-
-/* Styles for 'about' section paragraphs */
-#about p {
-  color: #74808a;
-  margin: 0;
-  text-indent: 1em;
-}
-
-/* Styles for the 'experience' section */
-#experience {
-  padding: 50px 15px;
-  text-align: center;
-  border-bottom: 1px solid #dcd9d9;
-}
-
-/* Styles for 'experience' section heading 2 */
-#experience h2 {
-  color: #374054;
-}
-
-/* Styles for the experience timeline container */
-#experience-timeline {
-  margin: 30px auto 0 auto;
-  position: relative;
-  max-width: 1000px;
-}
-
-/* Styles for the vertical line of the experience timeline */
-#experience-timeline:before {
-  position: absolute;
-  content: '';
-  top: 0;
-  bottom: 0;
-  left: 303px;
-  right: auto;
-  height: 100%;
-  width: 3px;
-  background: #2ecc71;
-  z-index: 0;
-}
-
-/* Styles for the bottom part of the vertical line */
-#experience-timeline:after {
-  position: absolute;
-  content: '';
-  width: 3px;
-  height: 40px;
-  background: #2ecc71;
-  background: linear-gradient(to bottom, #2ecc71, rgba(46, 204, 113, 0));
-  top: 100%;
-  left: 303px;
-}
-
-/* Styles for the content of each timeline entry */
-.vtimeline-content {
-  margin-left: 350px;
-  background: #fff;
-  border: 1px solid #e6e6e6;
-  padding: 15px;
-  border-radius: 3px;
-  text-align: left;
-}
-
-/* Styles for heading 3 within the timeline content */
-.vtimeline-content h3 {
-  font-size: 1.5em;
-  font-weight: 300;
-  color: #485437;
-  display: inline-block;
-  margin: 0;
-}
-
-/* Styles for span within heading 3 of timeline content */
-.vtimeline-content h3 span {
-  color: #2ecc71; /* or any other green color you prefer */
-}
-
-/* Styles for heading 4 within the timeline content */
-.vtimeline-content h4 {
-  font-size: 1.2em;
-  font-weight: 300;
-  color: #485437;
-  margin: 0 0 15px 0;
-}
-
-/* Styles for paragraphs within the timeline content */
-.vtimeline-content p {
-  color: #74808a;
-  font-size: 0.9em;
-  margin: 0;
-}
-
-/* Styles for the point of the timeline entry */
-.vtimeline-point {
-  position: relative;
-  display: block;
-  vertical-align: top;
-  margin-bottom: 30px;
-}
-
-/* Styles for the icon of the timeline entry */
-.vtimeline-icon {
-  position: relative;
-  color: #fff;
-  width: 50px;
-  height: 50px;
-  background: #2ecc71;
-  border-radius: 50%;
-  float: left;
-  z-index: 99;
-  margin-left: 280px;
-}
-
-/* Styles for the icon element within the timeline icon */
-.vtimeline-icon i {
-  display: block;
-  font-size: 2em;
-  margin-top: 10px;
-}
-
-/* Styles for the date of the timeline entry */
-.vtimeline-date {
-  width: 260px;
-  text-align: right;
-  position: absolute;
-  left: 0;
-  top: 10px;
-  font-weight: 300;
-  color: #374054;
-}
-
-/* Additional styles for the 'education' section */
-#education {
-  padding: 50px 15px 20px 15px;
-  border-bottom: 1px solid #dcd9d9;
-  text-align: center;
-}
-
-/* Styles for 'education' section heading 2 */
-#education h2 {
-  color: #374054;
-  margin-bottom: 50px;
-}
-
-/* Styles for the education block container */
-.education-block {
-  max-width: 700px;
-  margin: 0 auto 30px auto;
-  padding: 15px;
-  border: 1px solid #dcd9d9;
-  text-align: left;
-}
-
-/* Styles for heading 3 within education block */
-.education-block h3 {
-  font-weight: 500;
-  margin: 0;
-  color: #374054;
-}
-
-/* Styles for span within education block */
-.education-block span {
-  color: #74808a;
-  float: right;
-}
-
-/* Styles for heading 4 within education block */
-.education-block h4 {
-  color: #74808a;
-  clear: both;
-  font-weight: 500;
-  margin: 0 0 15px 0;
-}
-
-/* Styles for paragraphs and unordered lists within education block */
-.education-block p,
-.education-block ul {
-  margin: 0;
-  color: #74808a;
-  font-size: 0.9em;
-}
-
-/* Styles for unordered lists within education block */
-.education-block ul {
-  padding: 0 0 0 15px;
-}
-
-/* Styles for the 'projects' section */
-#projects {
-  padding: 50px 15px;
-  border-bottom: 1px solid #dcd9d9;
-  text-align: center;
-}
-
-/* Styles for 'projects' section heading 2 */
-#projects h2 {
-  color: #374054;
-  margin-bottom: 50px;
-}
-
-/* Styles for individual project container */
-.project {
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto 30px auto;
-  overflow: hidden;
-  background: #fff;
-  border-radius: 4px;
-}
-
-/* Styles for the project image container */
-.project-image {
-  float: left;
-}
-
-/* Styles for the project information container */
-.project-info {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-left: 300px;
-  padding: 15px;
-}
-
-/* Styles for heading 3 within project info */
-.project-info h3 {
-  font-size: 1.5em;
-  font-weight: 300;
-  color: #374054;
-  margin: 0 0 15px 0;
-}
-
-/* Styles for paragraphs within project info */
-.project-info p {
-  color: #74808a;
-  margin: 0 0 15px 0;
-  font-size: 0.9em;
-}
-
-/* Additional styles for project info when no image is present */
-.no-image .project-info {
-  position: relative;
-  margin: 0;
-  padding: 30px 15px;
-  transform: none;
-}
-
-/* Styles for the 'more projects' section */
-#more-projects {
-  display: none;
-}
-
-/* Styles for the 'skills' section */
-#skills {
-  padding: 50px 15px;
-  text-align: center;
-}
-
-/* Styles for 'skills' section heading 2 */
-#skills h2 {
-  color: #374054;
-  margin-bottom: 50px;
-}
-
-/* Styles for the skills list container */
-#skills ul {
-  display: block;
-  margin: 0 auto;
-  padding: 0;
-  max-width: 800px;
-}
-
-/* Styles for individual skill items */
-#skills li {
-  display: inline-block;
-  margin: 7px;
-  padding: 5px 10px;
-  color: #374054;
-  background: #e4e4ea;
-  list-style: none;
-  cursor: default;
-  font-size: 1.2em;
-}
-
-/* Styles for the 'contact' section */
-#contact {
-  padding: 50px 15px;
-  background: #2ecc71;
-  text-align: center;
-}
-
-/* Styles for 'contact' section heading 2 */
-#contact h2 {
-  margin: 0 0 15px 0;
-  color: #fff;
-  font-weight: 500;
-}
-
-/* Styles for the contact form container */
-#contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Styles for the form fields */
-.form-field {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid #b3d4fc;
-  border-radius: 4px;
-  color: #fff;
-}
-
-/* Styles for the form textarea */
-.form-textarea {
-  resize: vertical;
-}
-
-/* Styles for the form button */
-.form-button {
-  display: inline-block;
-  padding: 15px 25px;
-  background: #fff;
-  color: #2ecc71;
-  border: none;
-  border-radius: 30px;
-  font-size: 1.2em;
-  cursor: pointer;
-  transition: 0.5s ease all;
-}
-
-/* Hover styles for the form button */
-.form-button:hover {
-  background: #2ecc71;
-  color: #fff;
-}
-
-/* Styles for the social media links in the 'contact' section */
-#contact .social a {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 1.5em;
-  color: #fff;
-}
-
-/* Hover styles for social media links in the 'contact' section */
-#contact .social a:hover {
-  color: #2ecc71;
-}
+  
+  #about {
+    padding: 75px 15px;
+    border-bottom: 1px solid #dcd9d9;
+  }
+  
+  #about h2 {
+    color: #374054;
+  }
+  
+  #about p {
+    color: #74808a;
+    margin: 0;
+    text-indent: 1em;
+  }
+  
+  #experience {
+    padding: 50px 15px;
+    text-align: center;
+    border-bottom: 1px solid #dcd9d9;
+  }
+  
+  #experience h2 {
+    color: #374054;
+  }
+  
+  #experience-timeline {
+    margin: 30px auto 0 auto;
+    position: relative;
+    max-width: 1000px;
+  }
+  
+  #experience-timeline:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 303px;
+    right: auto;
+    height: 100%;
+    width: 3px;
+    background: #2ecc71;
+    z-index: 0;
+  }
+  
+  #experience-timeline:after {
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 40px;
+    background: #2ecc71;
+    background: linear-gradient(to bottom, #2ecc71, rgba(46, 204, 113, 0));
+    top: 100%;
+    left: 303px;
+  }
+  
+  .vtimeline-content {
+    margin-left: 350px;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    padding: 15px;
+    border-radius: 3px;
+    text-align: left;
+  }
+  
+  .vtimeline-content h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #485437;
+    display: inline-block;
+    margin: 0;
+  }
+  .vtimeline-content h3 span {
+    color: #2ecc71; /* or any other green color you prefer */
+  }
+  .vtimeline-content h4 {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #485437;
+    margin: 0 0 15px 0;
+  }
+  
+  .vtimeline-content p {
+    color: #74808a;
+    font-size: 0.9em;
+    margin: 0;
+  }
+  
+  .vtimeline-point {
+    position: relative;
+    display: block;
+    vertical-align: top;
+    margin-bottom: 30px;
+  }
+  
+  .vtimeline-icon {
+    position: relative;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    background: #2ecc71;
+    border-radius: 50%;
+    float: left;
+    z-index: 99;
+    margin-left: 280px;
+  }
+  
+  .vtimeline-icon i {
+    display: block;
+    font-size: 2em;
+    margin-top: 10px;
+  }
+  
+  .vtimeline-date {
+    width: 260px;
+    text-align: right;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    font-weight: 300;
+    color: #374054;
+  }
+  
+  /* ... (more existing styles) ... */
+  
+  #education {
+    padding: 50px 15px 20px 15px;
+    border-bottom: 1px solid #dcd9d9;
+    text-align: center;
+  }
+  
+  #education h2 {
+    color: #374054;
+    margin-bottom: 50px;
+  }
+  
+  .education-block {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    padding: 15px;
+    border: 1px solid #dcd9d9;
+    text-align: left;
+  }
+  
+  .education-block h3 {
+    font-weight: 500;
+    margin: 0;
+    color: #374054;
+  }
+  
+  .education-block span {
+    color: #74808a;
+    float: right;
+  }
+  
+  .education-block h4 {
+    color: #74808a;
+    clear: both;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+  }
+  
+  .education-block p,
+  .education-block ul {
+    margin: 0;
+    color: #74808a;
+    font-size: 0.9em;
+  }
+  
+  .education-block ul {
+    padding: 0 0 0 15px;
+  }
+  
+  #projects {
+    padding: 50px 15px;
+    border-bottom: 1px solid #dcd9d9;
+    text-align: center;
+  }
+  
+  #projects h2 {
+    color: #374054;
+    margin-bottom: 50px;
+  }
+  
+  .project {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 4px;
+  }
+  
+  .project-image {
+    float: left;
+  }
+  
+  .project-info {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 300px;
+    padding: 15px;
+  }
+  
+  .project-info h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #374054;
+    margin: 0 0 15px 0;
+  }
+  
+  .project-info p {
+    color: #74808a;
+    margin: 0 0 15px 0;
+    font-size: 0.9em;
+  }
+  
+  .no-image .project-info {
+    position: relative;
+    margin: 0;
+    padding: 30px 15px;
+    transform: none;
+  }
+  
+  #more-projects {
+    display: none;
+  }
+  
+  #skills {
+    padding: 50px 15px;
+    text-align: center;
+  }
+  
+  #skills h2 {
+    color: #374054;
+    margin-bottom: 50px;
+  }
+  
+  #skills ul {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 800px;
+  }
+  
+  #skills li {
+    display: inline-block;
+    margin: 7px;
+    padding: 5px 10px;
+    color: #374054;
+    background: #e4e4ea;
+    list-style: none;
+    cursor: default;
+    font-size: 1.2em;
+  }
+  
+  #contact {
+    padding: 50px 15px;
+    background: #2ecc71;
+    text-align: center;
+  }
+  
+  #contact h2 {
+    margin: 0 0 15px 0;
+    color: #fff;
+    font-weight: 500;
+  }
+  
+  #contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  #contact-form input,
+  #contact-form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 10px;
+    background: #27ae60;
+    color: #fff;
+    transition: 0.5s ease all;
+  }
+  
+  #contact-form input::-webkit-input-placeholder,
+  #contact-form textarea::-webkit-input-placeholder {
+    color: #fff;
+  }
+  
+  #contact-form input:-moz-placeholder,
+  #contact-form textarea:-moz-placeholder {
+    color: #fff;
+    opacity: 1;
+  }
+  
+  #contact-form input::-moz-placeholder,
+  #contact-form textarea::-moz-placeholder {
+    color: #fff;
+    opacity: 1;
+  }
+  
+  #contact-form input:-ms-input-placeholder,
+  #contact-form textarea:-ms-input-placeholder {
+    color: #fff;
+  }
+  
+  #contact-form input:focus,
+  #contact-form textarea:focus {
+    outline: none;
+    background: #1e824c;
+  }
+  
+  #contact-form textarea {
+    height: 150px;
+    resize: none;
+  }
+  
+  #contact-form button {
+    display: block;
+    width: 100%;
+    background: #fff;
+    border-radius: 4px;
+    padding: 5px 10px;
+    border: none;
+    color: #2ecc71;
+    font-weight: 700;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 0.5s ease all;
+  }
+  
+  #contact-form button:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+  
+  .optional-section {
+    padding: 50px 15px;
+    text-align: center;
+    border-top: 1px solid #dcd9d9;
+  }
+  
+  .optional-section h2 {
+    color: #374054;
+  }
+  
+  .optional-section-block {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    padding: 15px;
+    border: 1px solid #dcd9d9;
+    background: #fff;
+    text-align: left;
+  }
+  
+  .optional-section-block h3 {
+    font-weight: 500;
+    margin: 0 0 15px 0;
+    color: #374054;
+  }
+  
+  .optional-section-block h4 {
+    color: #74808a;
+    clear: both;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+  }
+  
+  .optional-section-block p,
+  .optional-section-block ul {
+    margin: 0 0 15px 0;
+    color: #74808a;
+    font-size: 0.9em;
+  }
+  
+  .optional-section-block ul {
+    padding: 0 0 0 15px;
+  }
+  
+  #publications {
+    padding: 50px 15px;
+    background: #f2f2f5;
+    text-align: center;
+    border-bottom: 1px solid #dcd9d9;
+  }
+  
+  #publications h2 {
+    color: #374054;
+    margin-bottom: 50px;
+  }
+  
+  .publication {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 4px;
+  }
+  
+  .publication h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #374054;
+    margin: 0 0 15px 0;
+  }
+  
+  .publication p {
+    color: #74808a;
+    margin: 0;
+    font-size: 0.9em;
+  }
+  
+  .publication:last-child {
+    margin-bottom: 0;
+  }
+  
+  #menu li a:hover {
+    color: #ff6600;
+    transition: color 0.3s ease;
+  }
+  
+  section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  section.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  @media only screen and (max-width: 750px) {
+    #experience-timeline:before,
+    #experience-timeline:after {
+      left: 23px;
+    }
+    .vtimeline-date {
+      width: auto;
+      text-align: left;
+      position: relative;
+      margin-bottom: 15px;
+      display: block;
+      margin-left: 70px;
+    }
+    .vtimeline-point {
+      margin-bottom: 60px;
+    }
+    .vtimeline-content {
+      margin-left: 0;
+    }
+    #experience-timeline > div h3,
+    #experience-timeline > div h4,
+    #experience-timeline > div p {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    header ul {
+      text-align: left;
+    }
+    header li {
+      display: block;
+      margin: 0;
+    }
+    header a {
+      padding: 15px;
+    }
+    #mobile-menu-open {
+      display: block;
+    }
+    #menu {
+      display: none;
+      position: fixed;
+      z-index: 15;
+      width: 100%;
+      background: #fff;
+      height: 100%;
+      top: 0;
+      right: 0;
+    }
+    #menu li {
+      display: block;
+      margin: 0;
+    }
+    #menu a {
+      display: block;
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    #menu.active {
+      display: block;
+    }
+    #mobile-menu-close {
+      display: block;
+    }
+    #lead-content {
+      padding: 0 20px;
+    }
+    #lead-content h1 {
+      font-size: 2.5em;
+      line-height: 1.2em;
+    }
+    #lead-content h2 {
+      font-size: 1.5em;
+    }
+    #lead-down {
+      bottom: 20px;
+    }
+    #experience-timeline:before,
+    #experience-timeline:after {
+      display: none;
+    }
+    .vtimeline-icon {
+      margin-left: 0;
+    }
+    #experience-timeline > div p {
+      padding: 0 20px;
+    }
+    .vtimeline-content {
+      padding: 20px;
+    }
+    #about,
+    #experience,
+    #education,
+    #projects,
+    #skills,
+    #contact,
+    #publications,
+    .optional-section {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .project-info {
+      margin-left: 0;
+    }
+    #publications h2 {
+      margin-bottom: 20px;
+    }
+  }
+  
