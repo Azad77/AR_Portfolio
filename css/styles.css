@@ -798,7 +798,7 @@ body {
     transform: translateY(0);
   }
 
-  /* Responsive styles for mobile devices */
+/* Responsive styles for mobile devices */
 @media only screen and (max-width: 767px) {
   /* Adjustments for the 'Projects' section */
   #projects .project {
@@ -814,7 +814,14 @@ body {
     margin-left: 0;
     padding: 15px;
   }
+
+  /* New styles to bring the image below the project info on mobile */
+  #projects .project .project-image {
+    display: block;
+    margin: 0 auto 15px; /* Center the image */
+  }
 }
+
   @media only screen and (max-width: 750px) {
     #experience-timeline:before,
     #experience-timeline:after {
