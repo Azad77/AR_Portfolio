@@ -797,7 +797,24 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
-  
+
+  /* Responsive styles for mobile devices */
+@media only screen and (max-width: 767px) {
+  /* Adjustments for the 'Projects' section */
+  #projects .project {
+    margin-bottom: 30px;
+  }
+
+  #projects .project .project-image {
+    float: none;
+    margin-bottom: 20px;
+  }
+
+  #projects .project .project-info {
+    margin-left: 0;
+    padding: 15px;
+  }
+}
   @media only screen and (max-width: 750px) {
     #experience-timeline:before,
     #experience-timeline:after {
